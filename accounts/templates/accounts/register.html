@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+
+{% block title %}Register - Car Rental{% endblock %}
+
+{% block content %}
+<!-- Breadcrumb Section -->
+<section class="breadcrumb_section text-center clearfix">
+    {% load static %}
+    <div class="page_title_area has_overlay d-flex align-items-center clearfix" data-bg-image="{% static 'images/breadcrumb/bg_09.jpg' %}">
+
+        <div class="overlay"></div>
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+            <h1 class="page_title text-white mb-0">Register</h1>
+        </div>
+    </div>
+    <div class="breadcrumb_nav clearfix" data-bg-color="#F2F2F2">
+        <div class="container">
+            <ul class="ul_li clearfix">
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li>Register</li>
+            </ul>
+        </div>
+    </div>
+</section>
+<!-- Breadcrumb Section - End -->
+<section class="register_section sec_ptb_100 clearfix">
+    <div class="container">
+        <div class="section_title text-center">
+            <h2>Register</h2>
+            <p>Create a new account to start renting cars easily.</p>
+        </div>
+
+        <form method="post" class="register_form">
+            {% csrf_token %}
+            
+            <div class="form-group">
+                {{ form.username.label_tag }}
+                {{ form.username }}
+                {% if form.username.errors %}
+                    <div class="text-danger">{{ form.username.errors }}</div>
+                {% endif %}
+            </div>
+            
+            <div class="form-group">
+                {{ form.email.label_tag }}
+                {{ form.email }}
+                {% if form.email.errors %}
+                    <div class="text-danger">{{ form.email.errors }}</div>
+                {% endif %}
+            </div>
+            
+            <div class="form-group">
+                {{ form.password1.label_tag }}
+                {{ form.password1 }}
+                {% if form.password1.errors %}
+                    <div class="text-danger">{{ form.password1.errors }}</div>
+                {% endif %}
+            </div>
+            
+            <div class="form-group">
+                {{ form.password2.label_tag }}
+                {{ form.password2 }}
+                {% if form.password2.errors %}
+                    <div class="text-danger">{{ form.password2.errors }}</div>
+                {% endif %}
+            </div>
+            
+            <button type="submit" class="btn btn-primary btn-block mt-4">Register</button>
+        </form>
+    </div>
+</section>
+{% endblock %}
