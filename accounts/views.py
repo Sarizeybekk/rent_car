@@ -2,21 +2,28 @@ from django.shortcuts import render, redirect
 from django.contrib.auth import login, authenticate, logout
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
+
+from accounts.enums import MailTemplates
 from .forms import RegisterForm, LoginForm
 from .utils import MailService  # SMTP işlemleri için yardımcı sınıf
 
-# Kayıt Görünümü
 def register_view(request):
     if request.method == 'POST':
         form = RegisterForm(request.POST)
         if form.is_valid():
             user = form.save()
-            # Kullanıcıya hoş geldin e-postası gönder
+            
+            # Mail için context
+            context = {
+                'user': user,  
+            }
+            # Mail gönder
             MailService.send_email(
-                subject="Welcome to Car Rental",
-                message="Thank you for registering. Enjoy our services!",
+                template_enum=MailTemplates.WELCOME_EMAIL,  # Enum kullanılıyor
+                context=context,
                 recipient_list=[user.email]
             )
+            
             messages.success(request, "Your account has been created!")
             return redirect('login')
     else:
