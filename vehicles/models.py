@@ -23,6 +23,7 @@ class Vehicle(models.Model):
     color = models.CharField(max_length=20)
     mileage = models.IntegerField()
     insurance_expiry = models.DateField()
+    image = models.ImageField(upload_to='vehicle_images/', blank=True, null=True)
 
     def __str__(self):
         return f"{self.license_plate} ({self.model})"

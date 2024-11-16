@@ -58,6 +58,8 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'car_rental_project.urls'
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # Static files (CSS, JavaScript, Images)
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [BASE_DIR / "static"]
