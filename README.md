@@ -1,69 +1,72 @@
-# 🚗 Rent Car Projesi
+# 🚗 Rent Car Project
 
-Merhaba! Bu depo, kullanıcıların araç kiralama işlemlerini kolaylaştıran bir sistem sunar. 🚙💨 Projemiz, kullanıcı dostu bir arayüz ve etkili bir backend sistemi ile araç kiralamayı sorunsuz hale getirir. 🎯
-
----
-
-## 📋 Özellikler
-
-- 🚀 **Kullanıcı Kaydı ve Girişi**: Kullanıcılar hızlı bir şekilde hesap oluşturabilir ve giriş yapabilir.
-- 🔍 **Araç Arama**: Kullanıcılar ihtiyaçlarına uygun araçları kolayca arayabilir.
-- 📅 **Rezervasyon**: Araçlar için tarih ve saat seçimi yapılarak kolayca rezervasyon yapılabilir.
-- 💳 **Ödeme Sistemi**: Güvenli ve hızlı ödeme işlemleri desteklenir.
-- 📊 **Yönetim Paneli**: Admin kullanıcılar için araç yönetimi ve rezervasyon takibi imkanı.
+It offers a system that makes car rental transactions easier for users. 🚙💨 Our project makes car rental hassle-free with a user-friendly interface and an effective backend system. 🎯
 
 ---
 
-## 🛠️ Kurulum
+## 📋 Features
 
-Bu projeyi kendi bilgisayarınızda çalıştırmak için aşağıdaki adımları izleyin:
+- 🚀 **User Registration and Login**: Users can quickly create an account and log in.
+- 🔍 **Vehicle Search**: Users can easily search for vehicles that suit their needs.
+- 📅 **Reservation**: Reservations can be made easily by selecting a date and time for vehicles.
+- 💳 **Payment System**: Secure and fast payment transactions are supported.
+- 📊 **Admin Panel**: Vehicle management and reservation tracking for admin users.
 
-### 1. **Depoyu Klonlayın**
-```bash
-git clone https://github.com/Sarizeybekk/rent_car.git
-2. Proje Dizinine Geçiş Yapın
+---
 
-Kodu kopyala
-cd rent_car
-3. Gerekli Bağımlılıkları Yükleyin
-Node.js kullanıyorsanız:
-bash
-Kodu kopyala
-npm install
-Python kullanıyorsanız:
-bash
-Kodu kopyala
-pip install -r requirements.txt
-4. Veritabanı Bağlantısını Yapılandırın
-Proje kök dizininde bir .env dosyası oluşturun ve veritabanı bilgilerinizi girin (örnek bir .env formatı dosyada sağlanmış olabilir).
-5. Uygulamayı Başlatın
-Node.js kullanıyorsanız:
-bash
-Kodu kopyala
-npm start
-Python/Django kullanıyorsanız:
-bash
-Kodu kopyala
-python manage.py runserver
-🎮 Kullanım
-Kullanıcı Kaydı ve Girişi:
+##🎮 Usage
+User Registration and Login:
 
-Uygulama arayüzünden giriş yapın veya yeni bir hesap oluşturun. 👤
-Araç Seçimi:
+Log in from the application interface or create a new account. 👤
+Vehicle Selection:
 
-Araç kiralama seçeneklerini keşfedin. 🔍
-Rezervasyon:
+Discover car rental options. 🔍
+Reservation:
 
-Araçlar için rezervasyonunuzu yapın ve ödemeyi tamamlayın. ✅
-Yönetim Paneli:
+Book your vehicles and complete the payment. ✅
+Admin Panel:
 
-Yönetici paneline erişim için admin hesabınızı kullanın. 🛡️
-💻 Teknolojiler
-Bu proje aşağıdaki teknolojiler kullanılarak geliştirilmiştir:
+Use your admin account to access the admin panel. 🛡️
+##💻 Technologies
+This project was developed using the following technologies:
 
 Backend: Django (Python)
 Frontend: HTML, CSS, JavaScript
-Veritabanı: PostgreSQL / SQLite
-Ödeme Sistemi: Stripe / PayPal entegrasyonu
-📞 Destek
-Eğer herhangi bir sorunla karşılaşırsanız veya katkıda bulunmak isterseniz, lütfen bir issue oluşturun.
+Database: PostgreSQL / SQLite
+Payment System: Stripe / PayPal integration
+##📞 Support
+If you encounter any problems or want to contribute, please create an issue.
+
+## 🛠️ Installation
+
+To run this project on your own computer, follow these steps:
+
+### 1. **Clone the Repository**
+```bash
+git clone https://github.com/Sarizeybekk/rent_car.git
+---
+2. Switch to Project Directory
+
+Copy the code
+cd rent_car
+3. Install Required Dependencies
+If you are using Node.js:
+bash
+Copy the code
+npm install
+If you are using Python:
+bash
+Copy the code
+pip install -r requirements.txt
+4. Configure Database Connection
+Create an .env file in the project root directory and enter your database information (an example .env format may be provided in the file).
+
+5. Start the Application
+If you are using Node.js:
+bash
+Copy the code
+npm start
+If you are using Python/Django:
+bash
+Copy the code
+python manage.py runserver
